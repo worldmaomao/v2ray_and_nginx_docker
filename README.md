@@ -13,8 +13,11 @@
 修改23143为其他端口，:（冒号）后面的80不要修改。
 
 2.修改v2ray的uuid。修改v2ray/server.json文件里的配置（inbounds -> settings -> clients -> id）。
+
 uuid的生成方式：
+
 a)访问http://www.uuid.online/ 
+
 b)cat /proc/sys/kernel/random/uuid
 
 
