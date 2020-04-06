@@ -1,6 +1,23 @@
 
 
 {
+  "policy":{
+    "levels": {
+      "1": {
+        "handshake": 4,
+        "connIdle": 300,
+        "uplinkOnly": 2,
+        "downlinkOnly": 5,
+        "statsUserUplink": false,
+        "statsUserDownlink": false,
+        "bufferSize": 10240
+      }
+    },
+    "system": {
+      "statsInboundUplink": false,
+      "statsInboundDownlink": false
+    }
+  },
   "inbounds": [{
     "port": 31812,
     "protocol": "vmess",
@@ -36,6 +53,13 @@
         "type": "field",
         "ip": ["geoip:private"],
         "outboundTag": "blocked"
+      },
+      {
+        "type": "field",
+        "outboundTag": "block",
+        "protocol": [
+          "bittorrent"
+        ]
       }
     ]
   }
